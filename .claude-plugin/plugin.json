@@ -1,0 +1,9 @@
+{
+  "name": "ai-brand-pipeline",
+  "version": "0.1.0",
+  "description": "Makes an agent's work answer to a brand system: brand facts and checks over MCP, a skill for the make-check-fix routine, and a reviewer subagent.",
+  "author": { "name": "Ned Karlovich", "url": "https://nedkarlovich.com" },
+  "repository": "https://github.com/Beach-Bum/ai-brand-pipeline",
+  "license": "MIT",
+  "keywords": ["brand", "design-system", "mcp", "lint"]
+}

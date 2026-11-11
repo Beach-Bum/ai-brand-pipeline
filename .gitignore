@@ -1,6 +1,5 @@
 .venv/
 __pycache__/
 .pytest_cache/
-*.jsonl.log
-calls.jsonl
+agent-logs/*.jsonl
 .env

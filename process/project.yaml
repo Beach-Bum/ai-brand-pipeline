@@ -11,3 +11,4 @@ next_step: name the brand; then its brand pack, its eval cases, and provider cho
 checks:
   - uv run pytest
   - uv run python evals/run.py
+  - claude plugin validate .

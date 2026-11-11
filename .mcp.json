@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "brand": {
+      "command": "uv",
+      "args": ["run", "--directory", "${CLAUDE_PLUGIN_ROOT}", "python", "-m", "brand_agent.server"],
+      "env": { "BRAND_AGENT_LOG": "${CLAUDE_PLUGIN_ROOT}/agent-logs/calls.jsonl" }
+    }
+  }
+}
