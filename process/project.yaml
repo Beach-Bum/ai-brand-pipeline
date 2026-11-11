@@ -1,0 +1,13 @@
+# NK project file. The brief is docs/briefs/0001-brand-agent.md.
+id: ai-brand-pipeline
+type: software
+status: structure-built
+owner: Ned Karlovich
+brand: not chosen            # decisions/0001
+visibility: public           # made public 2026-11-11 after a check for secrets and private details
+current_brief: docs/briefs/0001-brand-agent.md
+latest_decision: docs/decisions/0001-brand-neutral.md
+next_step: name the brand; then its brand pack, its eval cases, and provider choices
+checks:
+  - uv run pytest
+  - uv run python evals/run.py

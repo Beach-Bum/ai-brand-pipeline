@@ -1,0 +1,16 @@
+[project]
+name = "brand-agent"
+version = "0.1.0"
+description = "Tools that make AI work answer to a brand system: MCP server, checks, voice and video structure."
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=2.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[project.scripts]
+brand-agent-server = "brand_agent.server:main"

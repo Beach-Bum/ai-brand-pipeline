@@ -1,0 +1,60 @@
+{
+  "id": "example",
+  "name": "Fieldnote",
+  "fictional": true,
+  "source": {
+    "note": "A made-up brand used only to test the machinery. Replace this folder with a real brand pack."
+  },
+  "mission": "Fieldnote makes notebooks for people who work outdoors.",
+  "strategy": [
+    { "title": "Useful before beautiful.", "body": "Every product decision starts from what survives a wet pocket." },
+    { "title": "Plain words.", "body": "We describe what a thing does. We do not describe how it makes you feel." }
+  ],
+  "voice": {
+    "principles": ["Short sentences.", "Name the material and the measurement.", "One claim per sentence."],
+    "avoid": ["revolutionary", "game-changing", "seamless"]
+  },
+  "palette": [
+    { "name": "Ink", "hex": "#1c2420", "group": "primary", "text_on_it": "paper" },
+    { "name": "Paper", "hex": "#f4f1e8", "group": "primary", "text_on_it": "ink" },
+    { "name": "Signal", "hex": "#e8501f", "group": "primary", "text_on_it": "ink" },
+    { "name": "Moss", "hex": "#5c6f52", "group": "secondary", "text_on_it": "paper" },
+    { "name": "Stone", "hex": "#b9b5a7", "group": "secondary", "text_on_it": "ink" }
+  ],
+  "typefaces": [
+    { "name": "Source Serif 4", "role": "display", "styles": "Regular, Semibold" },
+    { "name": "Inter", "role": "text", "styles": "Regular, Medium" },
+    { "name": "JetBrains Mono", "role": "data", "styles": "Regular" }
+  ],
+  "art_direction": [
+    {
+      "id": "in-use",
+      "title": "In use",
+      "intro": "Hands, weather and worn objects. Daylight only. Nothing staged on a clean surface.",
+      "role": "Shows the product doing its job",
+      "covers": "Product, field work, people at work",
+      "swatches": ["#1c2420", "#5c6f52", "#b9b5a7"]
+    },
+    {
+      "id": "material",
+      "title": "Material",
+      "intro": "Close studies of paper, thread and cloth, lit from one side.",
+      "role": "Shows how it is made",
+      "covers": "Craft, detail, repair",
+      "swatches": ["#f4f1e8", "#b9b5a7", "#e8501f"]
+    }
+  ],
+  "tokens": {
+    "color": { "--c-ink": "#1c2420", "--c-paper": "#f4f1e8", "--c-signal": "#e8501f", "--c-moss": "#5c6f52", "--c-stone": "#b9b5a7" },
+    "font": {
+      "--font-display": ["Source Serif 4", "Georgia", "serif"],
+      "--font-text": ["Inter", "system-ui", "sans-serif"],
+      "--font-data": ["JetBrains Mono", "ui-monospace", "monospace"]
+    },
+    "font_size": { "--fs-display": "56px", "--fs-h1": "32px", "--fs-body": "16px", "--fs-small": "13px" },
+    "line_height": { "--lh-tight": 1.1, "--lh-normal": 1.5 },
+    "spacing": { "--sp-1": 4, "--sp-2": 8, "--sp-3": 16, "--sp-4": 24, "--sp-5": 40, "--sp-6": 64 },
+    "duration": { "--dur-fast": 120, "--dur-base": 240 },
+    "easing": { "--ease-out": "cubic-bezier(.2, .7, .2, 1)" }
+  }
+}

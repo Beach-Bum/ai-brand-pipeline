@@ -1,0 +1,22 @@
+{"id": "clean-card", "css": ".card { color: #1c2420; background: #f4f1e8; padding: 24px 16px; gap: 8px; }\n.card h2 { font-family: \"Source Serif 4\", Georgia, serif; }", "expect": []}
+{"id": "off-palette-blue", "css": ".btn { background: #1a73e8; color: #fff; }", "expect": [["colour", "#1a73e8"]]}
+{"id": "near-miss-orange", "css": ".tag { border: 1px solid #e85a2a; }", "expect": [["colour", "#e85a2a"]]}
+{"id": "short-hex", "css": ".x { color: #f00; }", "expect": [["colour", "#f00"]]}
+{"id": "upper-case-brand-colour", "css": ".x { color: #E8501F; }", "expect": []}
+{"id": "alpha-on-brand-colour", "css": ".x { background: #1c242080; }", "expect": []}
+{"id": "colour-in-gradient", "css": ".hero { background: linear-gradient(#f4f1e8, #ffe4b5); }", "expect": [["colour", "#ffe4b5"]]}
+{"id": "colour-only-in-comment", "css": "/* old: #ff00ff */\n.x { color: #5c6f52; }", "expect": []}
+{"id": "wrong-font", "css": "body { font-family: Roboto, Arial, sans-serif; }", "expect": [["font", "Roboto"], ["font", "Arial"]]}
+{"id": "brand-font-with-fallbacks", "css": "code { font-family: \"JetBrains Mono\", ui-monospace, monospace; }", "expect": []}
+{"id": "font-shorthand", "css": "h1 { font: 600 32px/1.1 Helvetica, serif; }", "expect": [["font", "Helvetica"]]}
+{"id": "font-token", "css": "p { font-family: var(--font-text); }", "expect": []}
+{"id": "off-scale-spacing", "css": ".a { margin: 10px 16px 30px; }", "expect": [["spacing", "10px"], ["spacing", "30px"]]}
+{"id": "spacing-zero-and-auto", "css": ".a { margin: 0 auto; padding: 0px; }", "expect": []}
+{"id": "gap-off-scale", "css": ".grid { display: grid; gap: 20px; }", "expect": [["spacing", "20px"]]}
+{"id": "px-that-is-not-spacing", "css": ".a { width: 250px; font-size: 13px; border-radius: 6px; top: 10px; }", "expect": []}
+{"id": "slow-transition", "css": ".a { transition: opacity 0.3s ease, transform 240ms; }", "expect": [["duration", "0.3s"]]}
+{"id": "brand-durations", "css": ".a { transition: color 120ms; animation-duration: 240ms; }", "expect": []}
+{"id": "animation-in-seconds", "css": ".spin { animation: spin 1s linear infinite; }", "expect": [["duration", "1s"]]}
+{"id": "everything-wrong", "css": ".x {\n  color: #333333;\n  font-family: Arial;\n  padding: 15px;\n  transition: all 500ms;\n}", "expect": [["colour", "#333333"], ["font", "Arial"], ["spacing", "15px"], ["duration", "500ms"]]}
+{"id": "rem-spacing-not-checked", "css": ".a { padding: 1.5rem; margin-top: 2em; }", "expect": []}
+{"id": "negative-margin", "css": ".a { margin-left: -10px; }", "expect": [["spacing", "10px"]]}
