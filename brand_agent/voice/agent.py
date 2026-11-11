@@ -5,10 +5,10 @@ loop:
 
     audio in --Transcriber--> text --Responder (model + brand tools)--> text --Speaker--> audio out
 
-What is built: the loop, the system prompt, the tool descriptions handed to the model, and the code
-that runs the tools the model asks for. What is NOT built: the three providers. They need accounts
-(speech-to-text, a model, text-to-speech) and are stubs in providers.py. The loop is tested with
-fakes in tests/test_voice.py.
+What is built: the loop, the system prompt, the tool descriptions handed to the model, the code
+that runs the tools the model asks for, and speech in and out on ElevenLabs (elevenlabs.py, run
+against the live service). What is NOT built: the model call, a stub in providers.py. The loop is
+tested with fakes in tests/test_server_voice_video.py and live in tests/test_elevenlabs_live.py.
 """
 from __future__ import annotations
 

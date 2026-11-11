@@ -16,7 +16,8 @@ What is in it:
 - **An agent pipeline**: a model writes, code checks, findings go back, until it passes or says it could not.
 - **A Claude Code plugin**: the server, a skill for the make-check-fix routine, and a reviewer subagent.
 - **An eval** for the check, with a pass floor, and **logs** that report error rate, latency and pass rate.
-- **The structure for a voice agent and a generative video pipeline**, tested with stand-ins; the provider calls are stubs.
+- **A voice agent**: speech in and out run on ElevenLabs; the model between them is still a stub.
+- **The structure for a generative video pipeline**, tested with a stand-in; the model call is a stub.
 
 Why each piece is a tool, a skill, a subagent or a prompt is in [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -32,7 +33,8 @@ Why each piece is a tool, a skill, a subagent or a prompt is in [ARCHITECTURE.md
 | Logs in `agent-logs/` and their summary | Built, tested | nothing |
 | Tracing to LangSmith | Written, **never run** | LangSmith account and key |
 | Voice agent: loop, prompt, tool hand-off | Built, tested with fake providers | nothing |
-| Voice agent: speech-to-text, model, text-to-speech | **Stubs** | three provider choices and keys |
+| Voice agent: speech-to-text and text-to-speech | Built on ElevenLabs; **run live** (a sentence spoken and transcribed back, and a full spoken turn) | `ELEVENLABS_API_KEY` |
+| Voice agent: the model in the middle | **Stub** | a model key |
 | Video: brief, shot plan, prompts | Built, tested | nothing |
 | Video: model call | **Stub** | a hosted video model account |
 | Video: frame review | **Not built**; every clip is marked unreviewed | real clips to measure |
@@ -45,7 +47,7 @@ Licence: MIT.
 
 ```bash
 uv sync
-uv run pytest                              # 52 tests
+uv run pytest                              # 52 tests; 3 more call ElevenLabs when a key is in .env
 uv run python evals/run.py                 # the CSS check against labelled cases
 uv run python -m brand_agent.server        # MCP over stdio
 PORT=8931 uv run python -m brand_agent.server --http   # MCP over HTTP at /mcp

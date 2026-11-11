@@ -1,4 +1,6 @@
-"""The three providers a voice session needs. STUBS: none of these is implemented.
+"""Provider stubs. Speech in and out are implemented in elevenlabs.py; the model is not.
+
+SpeechToText and TextToSpeech below are kept as the shape for another vendor.
 
 Each one needs an account and a choice of vendor, which is still open (docs/briefs/0001, "Open").
 They are here so the shape is fixed: implement the one method, pass the object to VoiceSession.

@@ -34,7 +34,7 @@ A brand's guidelines become a *brand pack* (one JSON file). From it:
 ## Open
 
 - Which brand, and where its guidelines live.
-- Providers: the model and the video model. Voice is likely ElevenLabs (an existing account, to be confirmed).
+- Providers: the model and the video model. Voice is ElevenLabs (done).
 - Accounts: LangSmith; a Google Cloud project with billing.
 
 ## Not built yet
@@ -44,7 +44,7 @@ video, and anything that needs an account.
 
 ## Evidence so far
 
-- 52 tests pass.
+- 52 tests pass without any account; 3 more pass against the live ElevenLabs service.
 - CSS check eval, 22 cases on the example brand: recall and precision 1.00 for all four rules.
   The first run scored 0.80 on spacing (negative margins were missed); fixed and rerun.
 - MCP server answered `initialize`, `tools/list` and `tools/call` over stdio and over HTTP on this
